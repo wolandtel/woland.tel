@@ -4,7 +4,7 @@
 		
 		public function __construct ($groups = false)
 		{
-			if ($groups === false)
+			if (($groups === false) || ($groups === []))
 				return;
 			
 			foreach ($groups as $group)
@@ -13,13 +13,18 @@
 		
 		private function group ($entries = false)
 		{
-			if ($enries === false)
+			if (($enries === false) || ($entries === []))
 				return;
 ?>
 				<div class="group">
 <?php
 			foreach ($entries as $entry)
+			{
+				if (($entry === false) || ($entry === []))
+					continue;
+				
 				$this->entry($entry[0], $entry[1], $entry[2]);
+			}
 ?>
 				</div>
 <?php

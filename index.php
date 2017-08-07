@@ -45,10 +45,14 @@
 				<div>
 					<h1><?=$config['name']?></h1>
 				</div>
+<?php
+	if ($config['description']):
+?>
 				<div>
 					<h3><?=$config['description']?></h3>
 				</div>
 <?php
+	endif;
 				new Content($config['content']);
 ?>
 			</div>
