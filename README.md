@@ -1,6 +1,8 @@
-# INSTALLATION
+# REQUIREMENTS
 
-Requirements: php-imagick
+* php-imagick
+
+# INSTALLATION
 
 * git clone https://git.woland.me/web/woland.tel \<site>
 * Put your background to \<site>/img/bg1.png and photo to \<site>/img/face.jpg. face.jpg should be square.	
