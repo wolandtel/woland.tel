@@ -1,3 +1,8 @@
+<?php
+	require('lib/Tools.php');
+
+	header('Content-Type: text/css');
+?>
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|PT+Mono');
 
 body
@@ -40,7 +45,7 @@ a:hover[href^="http"]
 
 #block1
 {
-	background: url(img/bg1.png) no-repeat;
+	background: url(<?=Tools::res('img/bg1.png')?>) no-repeat;
 }
 
 #face
@@ -48,7 +53,7 @@ a:hover[href^="http"]
 	width: 200px;
 	height: 200px;
 	border-radius: 100px;
-	background: url(img/face.jpg);
+	background: url(<?=Tools::res('img/face.jpg')?>);
 	background-size: 100%;
 	margin: 20px;
 }

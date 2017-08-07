@@ -13,7 +13,7 @@
 		
 		private function group ($entries = false)
 		{
-			if (($enries === false) || ($entries === []))
+			if (($entries === false) || ($entries === []))
 				return;
 ?>
 				<div class="group">

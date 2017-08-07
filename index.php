@@ -34,8 +34,7 @@
 		<!-- Font Awesome CDN -->
 		<script src="https://use.fontawesome.com/2e3b6ecdb9.js"></script>
 		
-		<?php Tools::css('styles.css'); ?>
-		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<?php Tools::css('styles.css.php'); ?>
 		<script language="javascript">
 			BGSIZE = {
 				w: <?=$bgSize['width']?>,
