@@ -1,9 +1,12 @@
 <?php
-	require('Content.php');
+	require('lib/Content.php');
+	require('lib/Tools.php');
 	
 	header("Content-type: text/html; charset=utf-8");
 	
 	$config = require('config.php');
+	$bgSize = Tools::imageGeometry(__DIR__ . '/img/bg1.png');
+	$faceSize = Tools::imageGeometry(__DIR__ . '/img/face.jpg');
 ?>
 
 <!DOCTYPE html>
@@ -31,13 +34,24 @@
 		<!-- Font Awesome CDN -->
 		<script src="https://use.fontawesome.com/2e3b6ecdb9.js"></script>
 		
+		<?php Tools::css('styles.css'); ?>
 		<link rel="stylesheet" type="text/css" href="styles.css" />
-		<script src="main.js"></script>
-		<link href="img/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+		<script language="javascript">
+			BGSIZE = {
+				w: <?=$bgSize['width']?>,
+				h: <?=$bgSize['height']?>
+			}
+		</script>
+		<?php Tools::js('main.js'); ?>
+		<link href="<?=Tools::res('img/favicon.ico')?>" rel="shortcut icon" type="image/vnd.microsoft.icon" />
 	</head>
 	<body>
 		<div id="block1" class="block container">
 			<div class="mask"></div>
+<?php
+			if ($faceSize['width'] != $faceSize['height'])
+				echo 'Warning: face.jpg should be square';
+?>
 			<div class="col-lg-3 col-md-4 col-sm-5">
 				<div id="face"></div>
 			</div>
