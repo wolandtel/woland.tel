@@ -34,12 +34,15 @@
 				return;
 			
 			if (is_string($entries[0]))
+			{
 				$title = array_shift($entries);
+				$this->contents[] = $title;
+			}
+				
 ?>
-				<h4 id="group<?=count($this->contents)?>"><?=$title?></h4>
+				<h4 id="group<?=count($this->contents) - 1?>"><?=$title?></h4>
 				<div class="group">
 <?php
-			$this->contents[] = $title;
 			foreach ($entries as $entry)
 			{
 				if (($entry === false) || ($entry === []))
