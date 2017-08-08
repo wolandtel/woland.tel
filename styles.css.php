@@ -120,7 +120,9 @@ a:hover[href^="http"]
 
 .group
 {
-	width: 320px;
+	width: auto;
+	max-width: 500px;
+	min-width: 340px;
 	font-size: 16px;
 	border-top: 1px solid;
 	border-radius: 10px 10px 0 0;
@@ -153,17 +155,18 @@ a:hover[href^="http"]
 	width: 60%;
 }
 
+@media (max-width: 370px)
+{
+	[class^="col-"]
+	{
+		padding: 0;
+	}
+}
 @media (min-width: 768px)
 {
 	.block .nav
 	{
 		visibility: visible;
-	}
-	
-	.group
-	{
-		width: auto;
-		max-width: 500px;
 	}
 }
 
