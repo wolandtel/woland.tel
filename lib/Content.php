@@ -1,7 +1,7 @@
 <?php
 	class Content
 	{
-		
+		private $contents = [];
 		public function __construct ($groups = false)
 		{
 			if (($groups === false) || ($groups === []))
@@ -9,15 +9,37 @@
 			
 			foreach ($groups as $group)
 				$this->group($group);
+			
+			if (count($this->contents))
+			{
+?>
+				<ul class="nav nav-pills nav-stacked">
+					<li role="presentation"><a href="#"><span class="fa fa-angle-double-up"></span> Top</a></li>
+<?php
+				foreach ($this->contents as $index => $title):
+?>
+					<li role="presentation"><a href="#group<?=$index?>"><?=$title?></a></li>
+<?php
+				endforeach;
+?>
+				</ul>
+<?php
+			}
+			
 		}
 		
 		private function group ($entries = false)
 		{
 			if (($entries === false) || ($entries === []))
 				return;
+			
+			if (is_string($entries[0]))
+				$title = array_shift($entries);
 ?>
+				<h4 id="group<?=count($this->contents)?>"><?=$title?></h4>
 				<div class="group">
 <?php
+			$this->contents[] = $title;
 			foreach ($entries as $entry)
 			{
 				if (($entry === false) || ($entry === []))

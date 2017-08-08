@@ -25,9 +25,16 @@ h1
 h3
 {
 	font-size: 30px;
+	margin-bottom: 20px
 }
 
-a:link, a:hover, a:active, a:visited
+h4
+{
+	font-size: 24px;
+	margin-left: 10px;
+}
+
+a, a:link, a:hover, a:active, a:visited
 {
 	color: #fff;
 	text-decoration: none;
@@ -78,6 +85,26 @@ a:hover[href^="http"]
 	margin-top: 0;
 }
 
+.block .nav
+{
+	position: fixed;
+	left: 55px;
+	top: 240px;
+	padding-top: 40px;
+	font-size: 24px;
+	visibility: hidden;
+}
+
+.nav > li > a
+{
+	padding: 0 15px;
+}
+
+.nav > li > a:focus, .nav > li > a:hover
+{
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
 .mask
 {
 	position: absolute;
@@ -93,12 +120,12 @@ a:hover[href^="http"]
 
 .group
 {
-	width: 340px;
+	width: 320px;
 	font-size: 16px;
 	border-top: 1px solid;
 	border-radius: 10px 10px 0 0;
 	background: rgba(0, 0, 0, 0.3);
-	margin: 20px 0 30px;
+	margin: 10px 0 40px;
 }
 
 .group > .entry
@@ -128,6 +155,11 @@ a:hover[href^="http"]
 
 @media (min-width: 768px)
 {
+	.block .nav
+	{
+		visibility: visible;
+	}
+	
 	.group
 	{
 		width: auto;
@@ -142,3 +174,7 @@ a:hover[href^="http"]
 @media (min-width: 1200px)
 {
 }
+
+/*
+	vim: syntax=css
+*/
