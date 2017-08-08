@@ -116,6 +116,9 @@ a:hover[href^="http"]
 .group > .entry > div:first-child
 {
 	width: 40%;
+	word-wrap: break-word;
+	text-indent: -10px;
+	padding-left: 30px;
 }
 
 .group > .entry > div:last-child

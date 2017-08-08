@@ -33,11 +33,14 @@
 		private function entry ($icon, $title, $content)
 		{
 			$icon = preg_replace('/^([^-]*)(-.*)$/', '\1 \1\2', $icon);
+			$t = mb_substr($title, 0, 1);
+			$title = mb_substr($title, 1);
 ?>
 					<div class="entry clearfix">
 						<div>
-							<span class="<?=$icon?>"></span>
-							<?=$title?>
+							<span class="entry-title">
+								<span class="text-nowrap"><span class="<?=$icon?>"></span> <?=$t?></span><?=$title?>
+							</span>
 						</div>
 						<div>
 <?php
