@@ -149,6 +149,7 @@ a:hover[href^="http"]
 	border-radius: 10px 10px 0 0;
 	background: rgba(0, 0, 0, 0.3);
 	margin: 10px 0 40px;
+	word-wrap: break-word;
 }
 
 .group > .entry
@@ -166,7 +167,6 @@ a:hover[href^="http"]
 .group > .entry > div:first-child
 {
 	width: 40%;
-	word-wrap: break-word;
 	text-indent: -10px;
 	padding-left: 30px;
 }
@@ -176,6 +176,29 @@ a:hover[href^="http"]
 	width: 60%;
 }
 
+@media (max-width: 339px)
+{
+	h1
+	{
+		font-size: 40px;
+	}
+	
+	h3
+	{
+		font-size: 25px;
+	}
+	
+	h4
+	{
+		font-size: 20px;
+	}
+	
+	.group
+	{
+		min-width: 240px;
+		font-size: 11px;
+	}
+}
 @media (max-width: 370px)
 {
 	[class^="col-"]
