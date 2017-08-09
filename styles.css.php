@@ -27,7 +27,7 @@ h3
 	font-size: 30px;
 }
 
-h1, h2
+h1, h3
 {
 	margin-bottom: 20px
 }
