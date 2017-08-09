@@ -25,6 +25,10 @@ h1
 h3
 {
 	font-size: 30px;
+}
+
+h1, h2
+{
 	margin-bottom: 20px
 }
 
