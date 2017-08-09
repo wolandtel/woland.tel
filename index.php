@@ -69,6 +69,7 @@
 				new Content($config['content']);
 ?>
 			</div>
+			<div id="powered"><img src="http://woland.tel/img/favicon.ico" />Powered by <a href="https://git.woland.me/web/woland.tel">Woland.tel engine</a></div>
 		</div>
 	</body>
 </html>

@@ -69,6 +69,23 @@ a:hover[href^="http"]
 	margin: 20px;
 }
 
+#powered
+{
+	position: absolute;
+	bottom: 2px;
+	font-size: 12px;
+	left: 0;
+	right: auto;
+	width: 100%;
+	text-align: center;
+}
+
+#powered img
+{
+	width: 25px;
+	margin-right: 8px;
+}
+
 .block
 {
 	width: 100%;
@@ -168,6 +185,14 @@ a:hover[href^="http"]
 }
 @media (min-width: 768px)
 {
+	#powered
+	{
+		left: auto;
+		right: 10px;
+		width: auto;
+		text-align: left;
+	}
+	
 	.block .nav
 	{
 		visibility: visible;
