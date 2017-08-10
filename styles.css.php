@@ -160,7 +160,6 @@ a:hover[href^="http"]
 
 .group > .entry > div
 {
-	padding-left: 10px;
 	float: left;
 }
 
@@ -174,6 +173,13 @@ a:hover[href^="http"]
 .group > .entry > div:last-child
 {
 	width: 60%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.entry-title > span > span
+{
+	width: 5px;
 }
 
 @media (max-width: 339px)
