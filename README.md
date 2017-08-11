@@ -1,5 +1,5 @@
 # MOTIVATION
-At the beginning of 2017 [Telnic](https://www.do.tel/) has renewed Telhosting platform. Unfortunately new hosting was much worser than former. Good news are that .tel zone has become a regular TLD so **\<zone>.tld** can be delegated. This engine was made as replacement of Telhosting for delegated .tel domains.
+At the beginning of 2017 [Telnic](https://www.do.tel/) has renewed its Telhosting platform. Unfortunately, the new hosting was much worse than the former. The good news is that the .tel zone has become a regular TLD so **\<zone>.tld** can be delegated. This engine was made as a replacement for Telhosting for delegated .tel domains.
 
 # REQUIREMENTS
 
