@@ -56,7 +56,7 @@ a:hover[href^="http"]
 
 #block1
 {
-	background: url(<?=Tools::res('img/bg1.png')?>) no-repeat;
+	background: url(<?=Tools::res('img/bg1.png')?>) no-repeat fixed;
 }
 
 #face
@@ -89,8 +89,8 @@ a:hover[href^="http"]
 .block
 {
 	width: 100%;
-	background-size: 100% auto !important;
 	background-position: center !important;
+	background-size: cover;
 	padding: 20px 0 10px;
 	position: relative;
 }
