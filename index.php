@@ -5,6 +5,7 @@
 	header("Content-type: text/html; charset=utf-8");
 	
 	$config = require('config.php');
+	$bgSize = Tools::imageGeometry(__DIR__ . '/img/bg1.png');
 	$faceSize = Tools::imageGeometry(__DIR__ . '/img/face.jpg');
 ?>
 
@@ -34,6 +35,12 @@
 		<script src="https://use.fontawesome.com/2e3b6ecdb9.js"></script>
 		
 		<?php Tools::css('styles.css.php'); ?>
+		<script language="javascript">
+			BGSIZE = {
+				w: <?=$bgSize['width']?>,
+				h: <?=$bgSize['height']?>
+			}
+		</script>
 		<?php Tools::js('main.js'); ?>
 		<link href="<?=Tools::res('img/favicon.ico')?>" rel="shortcut icon" type="image/vnd.microsoft.icon" />
 	</head>

@@ -6,12 +6,24 @@ function blockResize ()
 	var h = $window.height();
 	
 	$('.block').each(function () {
-		var $block = $(this);
+		var $block = $(this),
+			bh;
 		
 		$block.height('auto');
 		
-		if ($block.outerHeight() < h)
-			$block.outerHeight(h);
+		if ((bh = $block.outerHeight()) < h)
+			bh = h;
+		
+		if (BGSIZE.w)
+		{
+			if ($window.width() / $window.height() > BGSIZE.w / BGSIZE.h)
+				$block.attr('style', 'background-size: 100% auto !important');
+			else
+				$block.attr('style', 'background-size: auto 100% !important');
+		}
+		
+		if (bh == h)
+			$block.outerHeight(bh);
 	});
 }
 
