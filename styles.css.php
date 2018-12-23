@@ -182,6 +182,11 @@ a:hover[href^="http"]
 	width: 5px;
 }
 
+.fa, .fab, .far, .fas
+{
+	text-align: center;
+}
+
 @media (max-width: 339px)
 {
 	h1

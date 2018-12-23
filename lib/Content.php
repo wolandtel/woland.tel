@@ -57,7 +57,8 @@
 		
 		private function entry ($icon, $title, $content)
 		{
-			$icon = preg_replace('/^([^-]*)(-.*)$/', '\1 \1\2', $icon);
+			if (!preg_match('/^fa. /', $icon))
+				$icon = preg_replace('/^([^-]*)(-.*)$/', '\1 \1\2', $icon);
 			$t = mb_substr($title, 0, 1);
 			$title = mb_substr($title, 1);
 ?>
