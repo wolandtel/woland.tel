@@ -37,10 +37,11 @@
 			{
 				$title = array_shift($entries);
 				$this->contents[] = $title;
-			}
-				
 ?>
 				<h4 id="group<?=count($this->contents) - 1?>"><?=$title?></h4>
+<?php
+			}
+?>
 				<div class="group">
 <?php
 			foreach ($entries as $entry)
