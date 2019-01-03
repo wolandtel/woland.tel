@@ -5,14 +5,14 @@
 	header("Content-type: text/html; charset=utf-8");
 	
 	$config = require('config.php');
-	$bgSize = Tools::imageGeometry(__DIR__ . '/img/bg1.png');
-	$faceSize = Tools::imageGeometry(__DIR__ . '/img/face.jpg');
+	$bgSize = Tools::imageGeometry(__DIR__ . '/img/' . $config['img']['bg']);
+	$faceSize = Tools::imageGeometry(__DIR__ . '/img/' . $config['img']['face']);
 ?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title><?=$config['title']?></title>
+		<title><?= $config['title'] ?></title>
 		<meta name="viewport" content="width=600, user-scalable=yes" />
 		
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -45,13 +45,13 @@
 			</div>
 			<div class="col-lg-9 col-md-8 col-sm-7">
 				<div>
-					<h1><?=$config['name']?></h1>
+					<h1><?= $config['name'] ?></h1>
 				</div>
 <?php
 	if ($config['description']):
 ?>
 				<div>
-					<h3><?=$config['description']?></h3>
+					<h3><?= $config['description'] ?></h3>
 				</div>
 <?php
 	endif;
